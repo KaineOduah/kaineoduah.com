@@ -48,3 +48,14 @@
 .reveal.is-visible{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}
 }
+
+/* Build/version badge */
+.version-badge{
+  position:fixed; right:12px; bottom:10px;
+  padding:6px 10px; border-radius:9999px;
+  font-size:12px; line-height:1; font-weight:600;
+  background:rgba(163,230,53,0.14);
+  color:#c7f36b; border:1px solid rgba(163,230,53,0.35);
+  backdrop-filter:saturate(120%) blur(4px);
+  z-index:9999; pointer-events:none;
+}
