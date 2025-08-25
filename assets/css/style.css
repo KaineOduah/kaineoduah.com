@@ -59,3 +59,40 @@
   backdrop-filter:saturate(120%) blur(4px);
   z-index:9999; pointer-events:none;
 }
+
+/* --- mobile-fixes-v52 --- */
+/* Fluid headings */
+h1{font-size:clamp(2.2rem,7vw,4.25rem);line-height:1.05}
+h2{font-size:clamp(1.6rem,4.8vw,2.2rem)}
+h3{font-size:clamp(1.25rem,3.8vw,1.5rem)}
+
+/* Media scales */
+img,video,canvas,iframe,embed{max-width:100%;height:auto}
+table{width:100%;display:block;overflow-x:auto}
+pre,code{white-space:pre-wrap;word-break:break-word}
+
+/* Containers/cards */
+.container{padding-left:16px;padding-right:16px}
+.card,.project-card{width:100%}
+
+/* Nav: wrap & tap targets */
+header nav{display:flex;flex-wrap:wrap;gap:10px}
+header nav a{min-height:44px;padding:8px 10px}
+
+/* Version badge adjust */
+@media (max-width:768px){
+  .version-badge{transform:scale(.9);right:8px;bottom:6px}
+}
+
+/* Two-column sections collapse */
+@media (max-width:900px){
+  .grid-2,.two-col,.split{display:block}
+}
+
+/* Resume: desktop embed / mobile link */
+.resume-embed{display:block}
+.resume-mobile-link{display:none}
+@media (max-width:900px){
+  .resume-embed{display:none}
+  .resume-mobile-link{display:inline-flex;align-items:center;gap:8px}
+}
