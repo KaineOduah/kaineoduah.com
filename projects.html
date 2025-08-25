@@ -25,6 +25,7 @@
   </div>
 </header>
 
+
 <main class="container">
   <section class="section reveal">
     <h2 class="section-title">PROJECTS</h2>
@@ -34,7 +35,11 @@
         <h3>Zebrafish Brain Segmentation (U‑Net)</h3>
         <span class="years">2025</span>
       </div>
-      <p>Automates labeling of zebrafish brain structures in microscopy. The pipeline pairs images and masks cleanly, applies augmentation to improve generalization, and trains a U‑Net with a ResNet‑34 encoder initialized with ImageNet weights. Results are explained with Dice/IoU and side‑by‑side visuals so collaborators understand strengths and limits.</p>
+      <p><strong>What it is:</strong> a research‑oriented computer‑vision project that turns raw microscopy images of zebrafish brains into clean, labeled regions so scientists can quantify structure without drawing masks by hand. The output is not just a pretty overlay; it’s machine‑readable segmentation maps that let researchers compare shapes, sizes, and boundaries across many specimens.</p>
+      <p><strong>Why it matters:</strong> manual annotation is slow and inconsistent. This system replaces hours of clicking with repeatable predictions that hold up across varied lighting conditions and slight differences in sample prep. The design emphasizes scientific trust: clear metrics, visual comparisons, and honest breakdowns of where the model is confident versus uncertain.</p>
+      <p><strong>How it’s built (conceptually):</strong> images and masks are paired into a consistent dataset API; augmentations such as flips, small rotations, elastic warps, and photometric jitter help the model learn shape rather than memorize pixels. The network is a U‑Net with a ResNet‑34 encoder initialized with widely used weights to speed convergence. Training balances foreground/background with a Dice‑style objective to keep tiny structures from getting ignored. Evaluation uses a held‑out split with Dice and IoU plus qualitative side‑by‑sides that highlight border quality, false merges, and missed fine features.</p>
+      <p><strong>Design choices:</strong> the pipeline favors transparency over trickery. Every step—preprocessing, augmentation, loss, and post‑processing—is straightforward and documented so collaborators can trace exactly why a prediction looks the way it does. The notebook includes small ablations (e.g., with/without elastic transforms) to show how each choice affects boundary sharpness and consistency.</p>
+      <p><strong>Result:</strong> a dependable baseline that performs well on limited data and a clear blueprint for iteration (e.g., attention gates, multi‑scale losses, or domain‑specific augmentations) when more samples arrive.</p>
       <ul class="stack"><li>Python</li><li>PyTorch</li><li>OpenCV</li></ul>
       <div class="links"><a class="underline" target="_blank" rel="noopener" href="https://github.com/KaineOduah/zebrafish-brain-segmentation">GitHub</a></div>
     </article>
@@ -44,7 +49,11 @@
         <h3>SUN Lab Access System</h3>
         <span class="years">2024</span>
       </div>
-      <p>Desktop swipe‑card access simulator with an operator‑friendly admin panel and a durable SQLite backend. Emphasis on clarity under pressure: unambiguous controls, validation, and helpful feedback.</p>
+      <p><strong>What it is:</strong> a desktop application that models swipe‑card style access for a university lab. It keeps a durable record of who entered, when, and under which permission level—paired with an admin dashboard built for speed and clarity during busy hours.</p>
+      <p><strong>Why it matters:</strong> labs need accountability without complexity. Paper logs go missing; ad‑hoc spreadsheets don’t scale. This system standardizes the process so staff can resolve questions in seconds: search by name, filter by date, review a full history, and export a clean report if required.</p>
+      <p><strong>How it’s built (conceptually):</strong> the interface is written for legibility and quick flows: enroll, grant or revoke access, and review check‑ins. Under the hood, a normalized SQLite schema enforces structure and referential integrity, while input validation protects against accidental edits. Status messaging is woven into the UI so operators always know what just happened and what to do next.</p>
+      <p><strong>Design choices:</strong> emphasis on operability beats novelty—large click targets, predictable keyboard paths, and guardrails for destructive actions. The code separates the GUI layer from persistence, which makes it feasible to swap in a hardware reader or a different database later without rewriting the app.</p>
+      <p><strong>Result:</strong> a practical, low‑maintenance tool that replaces scattered processes with one reliable system.</p>
       <ul class="stack"><li>Python</li><li>SQLite</li><li>Tkinter</li></ul>
       <div class="links"><a class="underline" target="_blank" rel="noopener" href="https://github.com/KaineOduah/SUN_Lab_Project">GitHub</a></div>
     </article>
@@ -54,12 +63,17 @@
         <h3>Maintenance Request Web App</h3>
         <span class="years">2023</span>
       </div>
-      <p>End‑to‑end request lifecycle for facilities. Clear submission forms reduce ambiguity; role‑based dashboards keep work moving with a transparent history.</p>
+      <p><strong>What it is:</strong> a small full‑stack system where people submit facility issues and staff manage them from intake to completion. Think of it as a clear lane for work to move forward: requests enter with enough context, priorities are set, and status is visible to everyone involved.</p>
+      <p><strong>Why it matters:</strong> maintenance stalls when information is missing. The app nudges users to provide the right details up front—location, category, impact—cutting down on back‑and‑forth and improving turnaround time. For the team, the admin view clusters related tasks and highlights anything stuck or waiting on input.</p>
+      <p><strong>How it’s built (conceptually):</strong> a classic web tier with server‑rendered pages keeps it fast and reliable. Forms validate required fields; records flow through a clear lifecycle (new, triaged, assigned, in progress, done) with timestamped updates. The database schema is intentionally explicit—no magic—so reports and audits stay simple.</p>
+      <p><strong>Design choices:</strong> every screen is optimized for clarity: progressive disclosure hides complexity until it’s needed, and consistent copywriting reduces errors. The interface avoids visual noise, favoring a calm layout and sensible defaults that encourage correct use on the first try.</p>
+      <p><strong>Result:</strong> less ambiguity, faster resolution, and a tidy trail of decisions that helps teams learn from patterns.</p>
       <ul class="stack"><li>HTML</li><li>CSS</li><li>PHP</li><li>MySQL</li></ul>
       <div class="links"><a class="underline" target="_blank" rel="noopener" href="https://github.com/KaineOduah/Maintenance-Web-App">GitHub</a></div>
     </article>
   </section>
 </main>
+
 
 <footer class="footer">
   <div class="container">
