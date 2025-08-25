@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css?v43" />
+  <link rel="stylesheet" href="assets/css/style.css?v45" />
   <script>if(location.protocol!=='https:')location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
   <link rel="canonical" href="https://kaineoduah.com/" />
 </head>
@@ -35,23 +35,24 @@
     <div class="when">2023–2025</div>
     <div class="content">
       <h3>Pennsylvania State University — Media Assistant</h3>
-      <p><strong>What I Did:</strong> Supported courses and events with reliable A/V. I handled day‑of operations for lecture capture, projection, and sound; kept equipment healthy; and built small, no‑friction tools so instructors could focus on teaching instead of setup.</p>
-      <ul class="bullets">
-        <li>Operated cameras, capture systems, and projectors; reduced setup time and cut mid‑class interruptions.</li>
-        <li>Created quick utilities and checklists and standardized slide templates; made recurring tasks consistent for faculty and student workers.</li>
-        <li>Documented procedures so handoffs were clear and recoveries under time pressure were predictable.</li>
-      </ul>
+<p><strong>What I Did:</strong> Blended operations with lightweight engineering. I wrote small utilities in <strong>Python</strong> and <strong>Bash</strong> to pre‑flight encoder/capture setups, check disk space & device status, and batch‑transcode recordings with <strong>FFmpeg</strong>; built a tiny HTML/JS “operator panel” for checklists and run‑of‑show timers; and kept equipment reliable so instructors could just teach.</p>
+<ul class="bullets">
+  <li>Pre‑flight script verified capture cards mounted, audio levels present, and network reachability; surfaced a green/yellow status toast before class.</li>
+  <li>Automated post‑event tasks (rename, normalize audio, export H.264) via FFmpeg wrappers; cut minutes off every recording.</li>
+  <li>Git‑tracked SOPs and templates so changes were reviewable and rollbacks were trivial; reduced mistakes during handoffs.</li>
+</ul>
     </div>
   </div>
 <div class="entry">
     <div class="when">2022</div>
     <div class="content">
       <h3>Matrix Group Logistics Inc — IT Support</h3>
-      <p><strong>What I Did:</strong> Improved the company website’s clarity and maintainability while keeping everyday updates simple for non‑technical teammates.</p>
-      <ul class="bullets">
-        <li>Consistent page sections and copy reduced time‑to‑publish for routine changes.</li>
-        <li>Light versioning practices made it easy to spot and roll back mistakes.</li>
-      </ul>
+<p><strong>What I Did:</strong> Modernized the site’s content workflow with lightweight engineering. I refactored one‑off pages into reusable HTML snippets, added small <strong>Python</strong>/<strong>Bash</strong> tools to lint copy, check broken links, and generate a sitemap, and introduced <strong>Git</strong> branching so routine edits were safe and reversible for non‑technical teammates.</p>
+<ul class="bullets">
+  <li>Built a snippet library (headers, product blocks, CTAs) plus CSS utility tokens, turning most changes into simple data edits.</li>
+  <li>Pre‑commit script ran a link checker and HTML validator; blocked bad pushes and cut regressions.</li>
+  <li>Lightweight backups and “last published” tags made rollbacks and audits straightforward.</li>
+</ul>
     </div>
   </div>
 <div class="entry"> <div class="when">Community</div> <div class="content"> <h3>African Student Association & NSBE</h3> <p><strong>What I Did:</strong> Helped plan events and mentorship activities that connected students and shared practical skills. These roles sharpened my communication under pressure and my habit of turning loosely defined ideas into plans with owners and dates.</p> </div> </div>
@@ -62,7 +63,7 @@
     <div>© <span id="year"></span> Kaine Oduah</div>
   </div>
 </footer>
-<script src="assets/js/app.js?v43"></script>
-<div class="version-badge">v43</div>
+<script src="assets/js/app.js?v45"></script>
+<div class="version-badge">v45</div>
 </body>
 </html>
