@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaine Oduah — Portfolio</title>
+  <meta name="description" content="Kaine Oduah — portfolio and projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>if(location.protocol!=='https:')location.replace('https://'+location.host+location.pathname+location.search+location.hash);</script>
+  <link rel="canonical" href="https://kaineoduah.com/" />
+</head>
+<body data-page="index">
+<header class="site-nav">
+  <div class="container">
+    <a class="brand" href="index.html">Main Page</a>
+    <nav>
+      <a href="experience.html" class="">Experience</a>
+      <a href="projects.html" class="">Projects</a>
+      <a href="certificates.html" class="">Certificates</a>
+      <a href="contact.html" class="">Contact</a>
+      <a href="resume.html" class="">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="container">
+  <section class="hero reveal">
+    <h1 class="display">Kaine<br>Oduah</h1>
+    <p class="tagline">Computer Science graduate and creative developer focused on human‑centered software.</p>
+    <p class="sub">I turn ideas into practical systems, spanning web apps, desktop tools, and applied machine learning.</p>
+    <div class="meta-row">
+      <span class="pill">B.S. Computer Science, Penn State Harrisburg (2021–2025)</span>
+      <span class="pill">Frederick, MD</span>
+      <a class="pill link" href="resume.html">Resume</a>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2 class="section-title">ABOUT ME</h2>
+    <div class="prose">
+      <p>I like building things that feel simple and work reliably. My approach blends design sense with engineering discipline: understand the user, trim the UI to the essentials, write clean code, and iterate until it feels right. Recent work spans computer vision, desktop tooling, and full‑stack web.</p>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2 class="section-title">EDUCATION</h2>
+    <div class="k-cards">
+      <div class="card">
+        <h3>Pennsylvania State University Harrisburg — B.S. in Computer Science</h3>
+        <p class="muted">2021–2025, Harrisburg, PA</p>
+        <div class="grid two">
+          <div>
+            <h4>Selected Coursework</h4>
+            <ul>
+              <li>Data Structures and Algorithms</li>
+              <li>Databases and SQL</li>
+              <li>Systems Fundamentals and Computer Organization</li>
+              <li>Theory of Computation</li>
+              <li>Agile Methodology</li>
+              <li>Natural Language Processing</li>
+              <li>User Experience Design</li>
+              <li>Data Models and Inference</li>
+              <li>Discrete Mathematics</li>
+              <li>Information Literacy</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Clubs and Community</h4>
+            <ul>
+              <li>African Student Association, events and promotion</li>
+              <li>National Society of Black Engineers, mentorship and workshops</li>
+            </ul>
+            <h4 class="mt12">Certification</h4>
+            <ul>
+              <li>CompTIA Security+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2 class="section-title">HOW I WORK</h2>
+    <div class="grid three">
+      <div class="card">
+        <h4>Plan and Model</h4>
+        <p>Start with the user problem, sketch interfaces and data flows. Small diagrams save large refactors.</p>
+      </div>
+      <div class="card">
+        <h4>Build and Iterate</h4>
+        <p>Ship the smallest useful version, get feedback, iterate with discipline so the code stays tidy.</p>
+      </div>
+      <div class="card">
+        <h4>Measure and Polish</h4>
+        <p>Metrics and real users drive the last mile, including performance and accessibility.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2 class="section-title">HIGHLIGHT PROJECTS</h2>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Zebrafish Brain Segmentation (U‑Net)</h3>
+        <span class="years">2025</span>
+      </div>
+      <p>This work automates labeling of zebrafish brain structures in microscopy. I built a clear dataset (TIFF images paired with PNG masks), designed augmentations, and trained a U‑Net with ResNet‑34 encoder and ImageNet weights. The notebook focuses on transparent evaluation (Dice and IoU) and visual breakdowns of successes and failures so non‑ML collaborators can understand what the model is doing.</p>
+      <ul class="stack"><li>Python</li><li>PyTorch</li><li>OpenCV</li></ul>
+      <div class="links"><a class="underline" target="_blank" rel="noopener" href="https://github.com/KaineOduah/zebrafish-brain-segmentation">GitHub</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>SUN Lab Access System</h3>
+        <span class="years">2024</span>
+      </div>
+      <p>A desktop system that simulates a swipe‑card access flow with an operator‑friendly admin panel. Durable storage uses SQLite with explicit schemas, while the GUI emphasizes clarity under pressure with obvious controls, validations, and helpful messages.</p>
+      <ul class="stack"><li>Python</li><li>SQLite</li><li>Tkinter</li></ul>
+      <div class="links"><a class="underline" target="_blank" rel="noopener" href="https://github.com/KaineOduah/SUN_Lab_Project">GitHub</a></div>
+    </div>
+
+    <div class="project">
+      <div class="project-head">
+        <h3>Maintenance Request Web App</h3>
+        <span class="years">2023</span>
+      </div>
+      <p>A full workflow for reporting and tracking maintenance tasks. Users submit clear requests, admins triage and update statuses, and everyone sees a transparent history that reduces back‑and‑forth.</p>
+      <ul class="stack"><li>HTML</li><li>CSS</li><li>PHP</li><li>MySQL</li></ul>
+      <div class="links"><a class="underline" target="_blank" rel="noopener" href="https://github.com/KaineOduah/Maintenance-Web-App">GitHub</a></div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <h2 class="section-title">CONTACT</h2>
+    <p class="muted">Email <a href="mailto:kaineoduah@yahoo.com">kaineoduah@yahoo.com</a> or connect on <a href="https://www.linkedin.com/in/kaine-oduah-38b59b23a" target="_blank" rel="noopener">LinkedIn</a>.</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© <span id="year"></span> Kaine Oduah</div>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
