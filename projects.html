@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Projects | Kaine Oduah</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="container site-nav-inner">
+    <a href="index.html" class="brand">Kaine <span>Oduah</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section reveal">
+    <div class="section-heading">
+      <h1 class="section-title">Projects</h1>
+      <p class="section-subtitle">Clear outcomes, thoughtful design, and practical impact</p>
+    </div>
+
+    <div class="projects-list">
+      <article class="project-block" id="zebrafish">
+        <div class="project-header">
+          <h2 class="project-title">Deep learning brain segmentation</h2>
+          <div class="project-meta">Machine Learning and Artificial Intelligence</div>
+        </div>
+
+        <div class="project-body">
+          <p><strong>Overview:</strong> Built an end to end workflow that segments brain regions from microscopy style images, converting a time intensive manual labeling process into a repeatable pipeline. The project focuses on producing consistent masks that support downstream measurement and analysis, while staying simple to run and easy to review for quality.</p>
+          <p><strong>Tools used:</strong> Python, PyTorch, OpenCV.</p>
+          <p><strong>Approach:</strong> Prepared paired images and ground truth masks, then implemented preprocessing that standardizes sizing and intensity while filtering out low quality samples. Built training data loaders with safety checks so the model always receives correctly aligned inputs. Trained a U Net architecture and tracked loss and accuracy across epochs, then validated results by comparing predicted masks against ground truth both visually and with metrics. Iterated on preprocessing, learning rate, and regularization settings to reduce overfitting and improve generalization to new samples.</p>
+          <p><strong>Impact:</strong> Produces segmentation outputs that are consistent across runs and faster to generate at scale than manual labeling alone. The pipeline reduces human variability, improves repeatability for analysis, and adds a clear review loop so collaborators can confirm quality before using the outputs in research conclusions or further experiments.</p>
+
+          <div class="project-images">
+            <figure>
+              <img src="assets/img/training_data_for_unet_model.png" alt="Training data for U Net model." />
+              <figcaption>Training Data for U-Net Model</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/img/image_segmentation.png" alt="Image segmentation example." />
+              <figcaption>Image Segmentation</figcaption>
+            </figure>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/KaineOduah/zebrafish-brain-segmentation">GitHub repository</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-block" id="sunlab">
+        <div class="project-header">
+          <h2 class="project-title">SUN Lab access system</h2>
+          <div class="project-meta">Desktop application</div>
+        </div>
+
+        <div class="project-body">
+          <p><strong>Overview:</strong> Created a desktop lab access system that replaces paper sign in sheets with structured records that are easy to search and audit. The goal was a clean flow for users, plus an administrative view that makes it simple to review visits by student ID and date range without jumping between tools.</p>
+          <p><strong>Tools used:</strong> Python, SQLite.</p>
+          <p><strong>Approach:</strong> Designed a lightweight database schema for access events, implemented input validation to prevent inconsistent records, and built an interface that supports fast searches with clear formatting. Focused on predictable timestamps and readable output so staff can confirm activity quickly. Added guardrails to reduce invalid date ranges and ensure queries always return results that match expectations.</p>
+          <p><strong>Impact:</strong> Improves accuracy and speed of record retrieval, reduces manual errors, and creates a dependable local tool that works without internet access. The consistent history also supports reporting and operational decisions, such as identifying peak usage windows and verifying access patterns.</p>
+
+          <div class="project-images">
+            <figure>
+              <img src="assets/img/sun_lab_record.png" alt="SUN Lab record screenshot." />
+              <figcaption>SUN Lab Record</figcaption>
+            </figure>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/KaineOduah/SUN_Lab_Project">GitHub repository</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-block" id="maintenance">
+        <div class="project-header">
+          <h2 class="project-title">Maintenance request web app</h2>
+          <div class="project-meta">Full stack web application</div>
+        </div>
+
+        <div class="project-body">
+          <p><strong>Overview:</strong> Built a web application that lets residents submit maintenance requests in a consistent format while giving staff a clear view of what is new, what is in progress, and what is resolved. The system replaces scattered messages with a single, searchable source of truth that supports better prioritization and follow up.</p>
+          <p><strong>Tools used:</strong> HTML, CSS, PHP, MySQL.</p>
+          <p><strong>Approach:</strong> Designed a relational database to store requests, categories, and statuses. Implemented validated forms for submission and an administrative view for review and triage. Structured the workflow around simple request states so each item moves forward clearly, and ensured the backend writes are consistent so history remains accurate. Optimized the interface for quick scanning, so staff can identify high priority requests immediately.</p>
+          <p><strong>Impact:</strong> Centralizes communication, improves accountability, and creates a searchable request history that can reveal recurring issues. It reduces missed tickets by keeping everything visible in one place and supports faster response times because staff can sort, filter, and update statuses without chasing information across multiple channels.</p>
+
+          <div class="project-images">
+            <figure>
+              <img src="assets/img/maintenance_web_app_data_entry.png" alt="Maintenance web app data entry screen." />
+              <figcaption>Maintenance Web App Data Entry</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/img/saved_data.png" alt="Saved data screenshot." />
+              <figcaption>Saved Data</figcaption>
+            </figure>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/KaineOduah/Maintenance-Web-App">GitHub repository</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span id="year"></span> Kaine Oduah</div>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
